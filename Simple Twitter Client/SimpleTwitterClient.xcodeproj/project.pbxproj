@@ -1,0 +1,867 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2843A8731581A39F00EC3C73 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2843A8711581A39F00EC3C73 /* CFNetwork.framework */; };
+		2843A8741581A39F00EC3C73 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2843A8721581A39F00EC3C73 /* MobileCoreServices.framework */; };
+		286B51F313F5C538000CDC31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B51F213F5C538000CDC31 /* UIKit.framework */; };
+		286B51F513F5C538000CDC31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B51F413F5C538000CDC31 /* Foundation.framework */; };
+		286B51F713F5C538000CDC31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B51F613F5C538000CDC31 /* CoreGraphics.framework */; };
+		286B51FD13F5C538000CDC31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 286B51FB13F5C538000CDC31 /* InfoPlist.strings */; };
+		286B51FF13F5C538000CDC31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 286B51FE13F5C538000CDC31 /* main.m */; };
+		286B520313F5C538000CDC31 /* SimpleTwitterClientAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 286B520213F5C538000CDC31 /* SimpleTwitterClientAppDelegate.mm */; };
+		286B520A13F5C538000CDC31 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286B520813F5C538000CDC31 /* MainWindow_iPhone.xib */; };
+		286B521113F5C538000CDC31 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286B520F13F5C538000CDC31 /* MainWindow_iPad.xib */; };
+		286B535413F5D29B000CDC31 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535313F5D29B000CDC31 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		286B535613F5D2BF000CDC31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535513F5D2BF000CDC31 /* SystemConfiguration.framework */; };
+		286B535813F5D2CC000CDC31 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535713F5D2CC000CDC31 /* MessageUI.framework */; };
+		286B535A13F5D2DB000CDC31 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535913F5D2DB000CDC31 /* EventKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		286B535C13F5D2E9000CDC31 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535B13F5D2E9000CDC31 /* CoreMotion.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		286B536313F5D320000CDC31 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535D13F5D320000CDC31 /* AddressBook.framework */; };
+		286B536413F5D320000CDC31 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B535E13F5D320000CDC31 /* AddressBookUI.framework */; };
+		286B536513F5D320000CDC31 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536013F5D320000CDC31 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		286B536613F5D320000CDC31 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536113F5D320000CDC31 /* OpenAL.framework */; };
+		286B536713F5D320000CDC31 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536213F5D320000CDC31 /* OpenGLES.framework */; };
+		286B536A13F5D361000CDC31 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536913F5D361000CDC31 /* CoreAudio.framework */; };
+		286B536E13F5D38B000CDC31 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536B13F5D38A000CDC31 /* AudioToolbox.framework */; };
+		286B536F13F5D38B000CDC31 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536C13F5D38A000CDC31 /* AVFoundation.framework */; };
+		286B537013F5D38B000CDC31 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B536D13F5D38A000CDC31 /* MediaPlayer.framework */; };
+		286B537213F5D46B000CDC31 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B537113F5D46B000CDC31 /* libz.dylib */; };
+		286B537413F5D49E000CDC31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286B537313F5D49E000CDC31 /* QuartzCore.framework */; };
+		286B54AA13F5D621000CDC31 /* Bootstrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 286B54A813F5D621000CDC31 /* Bootstrapper.cpp */; };
+		288A3C9516EAAFE500232A97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3C9416EAAFE500232A97 /* SystemConfiguration.framework */; };
+		288A3C9716EAAFEB00232A97 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3C9616EAAFEB00232A97 /* libz.dylib */; };
+		288A3C9916EAAFF700232A97 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3C9816EAAFF700232A97 /* AudioToolbox.framework */; };
+		288A3C9B16EAB00B00232A97 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3C9A16EAB00B00232A97 /* CFNetwork.framework */; };
+		288A3CA716EAB35200232A97 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288A3CA616EAB35200232A97 /* CoreServices.framework */; };
+		28B9CE7F16CD0EE3000FEDE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28B9CE7D16CD0EE3000FEDE8 /* InfoPlist.strings */; };
+		28B9CE8116CD0EE3000FEDE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B9CE8016CD0EE3000FEDE8 /* main.m */; };
+		28B9CE8816CD0EE3000FEDE8 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28B9CE8716CD0EE3000FEDE8 /* AppDelegate.mm */; };
+		28B9CE8B16CD0EE3000FEDE8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B9CE8916CD0EE3000FEDE8 /* MainMenu.xib */; };
+		28B9CE8F16CD0F49000FEDE8 /* Bootstrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 286B54A813F5D621000CDC31 /* Bootstrapper.cpp */; };
+		28B9CE9316CD15B5000FEDE8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CE9216CD15B5000FEDE8 /* Cocoa.framework */; };
+		28B9CE9516CD15BB000FEDE8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CE9416CD15BB000FEDE8 /* OpenGL.framework */; };
+		28B9CE9716CD15DB000FEDE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CE9616CD15DB000FEDE8 /* Foundation.framework */; };
+		28B9CE9916CD15E0000FEDE8 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CE9816CD15E0000FEDE8 /* AppKit.framework */; };
+		28B9CE9B16CD16D5000FEDE8 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CE9A16CD16D5000FEDE8 /* IOKit.framework */; };
+		28B9CE9D16CD16E0000FEDE8 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CE9C16CD16E0000FEDE8 /* QTKit.framework */; };
+		28B9CEA116CD16F8000FEDE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CEA016CD16F8000FEDE8 /* CoreGraphics.framework */; };
+		28B9CEA316CD1706000FEDE8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CEA216CD1706000FEDE8 /* CoreText.framework */; };
+		28B9CEA516CD170C000FEDE8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CEA416CD170C000FEDE8 /* OpenAL.framework */; };
+		28B9CEA916CD174C000FEDE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CEA816CD174C000FEDE8 /* QuartzCore.framework */; };
+		28B9CEAB16CD1772000FEDE8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9CEAA16CD1772000FEDE8 /* ImageIO.framework */; };
+		D3C9221516F23A8E00E2CE7E /* TwitterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3C9221316F23A8E00E2CE7E /* TwitterScene.cpp */; };
+		D3C9221616F23A8E00E2CE7E /* TwitterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3C9221316F23A8E00E2CE7E /* TwitterScene.cpp */; };
+		D3D443861678A1B200540301 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D443851678A1B200540301 /* CoreText.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2843A8711581A39F00EC3C73 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2843A8721581A39F00EC3C73 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2843A8951582B8FF00EC3C73 /* AndroidManifest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = ../android/AndroidManifest.xml; sourceTree = "<group>"; };
+		2843A8991582B90F00EC3C73 /* SimpleTwitterClientActivity.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = SimpleTwitterClientActivity.java; sourceTree = "<group>"; };
+		286B51EE13F5C538000CDC31 /* SimpleTwitterClient iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleTwitterClient iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		286B51F213F5C538000CDC31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		286B51F413F5C538000CDC31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		286B51F613F5C538000CDC31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		286B51FA13F5C538000CDC31 /* SimpleTwitterClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTwitterClient-Info.plist"; sourceTree = "<group>"; };
+		286B51FC13F5C538000CDC31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		286B51FE13F5C538000CDC31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		286B520013F5C538000CDC31 /* SimpleTwitterClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTwitterClient-Prefix.pch"; sourceTree = "<group>"; };
+		286B520113F5C538000CDC31 /* SimpleTwitterClientAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTwitterClientAppDelegate.h; sourceTree = "<group>"; };
+		286B520213F5C538000CDC31 /* SimpleTwitterClientAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleTwitterClientAppDelegate.mm; sourceTree = "<group>"; };
+		286B520913F5C538000CDC31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		286B521013F5C538000CDC31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		286B521713F5C642000CDC31 /* SimpleTwitterClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SimpleTwitterClient.entitlements; sourceTree = "<group>"; };
+		286B535313F5D29B000CDC31 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		286B535513F5D2BF000CDC31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		286B535713F5D2CC000CDC31 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		286B535913F5D2DB000CDC31 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		286B535B13F5D2E9000CDC31 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		286B535D13F5D320000CDC31 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		286B535E13F5D320000CDC31 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		286B535F13F5D320000CDC31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		286B536013F5D320000CDC31 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		286B536113F5D320000CDC31 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		286B536213F5D320000CDC31 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		286B536813F5D35B000CDC31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		286B536913F5D361000CDC31 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		286B536B13F5D38A000CDC31 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		286B536C13F5D38A000CDC31 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		286B536D13F5D38A000CDC31 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		286B537113F5D46B000CDC31 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		286B537313F5D49E000CDC31 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		286B54A813F5D621000CDC31 /* Bootstrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bootstrapper.cpp; sourceTree = "<group>"; };
+		286B54A913F5D621000CDC31 /* Bootstrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bootstrapper.h; sourceTree = "<group>"; };
+		288A3C9416EAAFE500232A97 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		288A3C9616EAAFEB00232A97 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		288A3C9816EAAFF700232A97 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		288A3C9A16EAB00B00232A97 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		288A3CA616EAB35200232A97 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		289E8CAB16111A6A00C0516E /* res_common */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res_common; sourceTree = "<group>"; };
+		289E8CAC16111A6A00C0516E /* res_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res_ios; sourceTree = "<group>"; };
+		289E8CAF16111A7500C0516E /* res_android */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res_android; sourceTree = "<group>"; };
+		28B9CE6B16CD0BC2000FEDE8 /* res_mac */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res_mac; sourceTree = "<group>"; };
+		28B9CE7116CD0EE2000FEDE8 /* SimpleTwitterClient Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleTwitterClient Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B9CE7C16CD0EE3000FEDE8 /* SimpleTwitterClient mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTwitterClient mac-Info.plist"; sourceTree = "<group>"; };
+		28B9CE7E16CD0EE3000FEDE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		28B9CE8016CD0EE3000FEDE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28B9CE8216CD0EE3000FEDE8 /* SimpleTwitterClient mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTwitterClient mac-Prefix.pch"; sourceTree = "<group>"; };
+		28B9CE8616CD0EE3000FEDE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28B9CE8716CD0EE3000FEDE8 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		28B9CE8A16CD0EE3000FEDE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		28B9CE9216CD15B5000FEDE8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CE9416CD15BB000FEDE8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CE9616CD15DB000FEDE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CE9816CD15E0000FEDE8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CE9A16CD16D5000FEDE8 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CE9C16CD16E0000FEDE8 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CE9E16CD16EC000FEDE8 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CEA016CD16F8000FEDE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CEA216CD1706000FEDE8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CEA416CD170C000FEDE8 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CEA616CD171E000FEDE8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CEA816CD174C000FEDE8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		28B9CEAA16CD1772000FEDE8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		D3C9221316F23A8E00E2CE7E /* TwitterScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwitterScene.cpp; sourceTree = "<group>"; };
+		D3C9221416F23A8E00E2CE7E /* TwitterScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterScene.h; sourceTree = "<group>"; };
+		D3D443851678A1B200540301 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		286B51EB13F5C538000CDC31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3D443861678A1B200540301 /* CoreText.framework in Frameworks */,
+				2843A8731581A39F00EC3C73 /* CFNetwork.framework in Frameworks */,
+				2843A8741581A39F00EC3C73 /* MobileCoreServices.framework in Frameworks */,
+				286B537413F5D49E000CDC31 /* QuartzCore.framework in Frameworks */,
+				286B537213F5D46B000CDC31 /* libz.dylib in Frameworks */,
+				286B536E13F5D38B000CDC31 /* AudioToolbox.framework in Frameworks */,
+				286B536F13F5D38B000CDC31 /* AVFoundation.framework in Frameworks */,
+				286B537013F5D38B000CDC31 /* MediaPlayer.framework in Frameworks */,
+				286B536A13F5D361000CDC31 /* CoreAudio.framework in Frameworks */,
+				286B51F313F5C538000CDC31 /* UIKit.framework in Frameworks */,
+				286B536313F5D320000CDC31 /* AddressBook.framework in Frameworks */,
+				286B536413F5D320000CDC31 /* AddressBookUI.framework in Frameworks */,
+				286B51F513F5C538000CDC31 /* Foundation.framework in Frameworks */,
+				286B536513F5D320000CDC31 /* GameKit.framework in Frameworks */,
+				286B536613F5D320000CDC31 /* OpenAL.framework in Frameworks */,
+				286B536713F5D320000CDC31 /* OpenGLES.framework in Frameworks */,
+				286B535C13F5D2E9000CDC31 /* CoreMotion.framework in Frameworks */,
+				286B535A13F5D2DB000CDC31 /* EventKit.framework in Frameworks */,
+				286B535813F5D2CC000CDC31 /* MessageUI.framework in Frameworks */,
+				286B535613F5D2BF000CDC31 /* SystemConfiguration.framework in Frameworks */,
+				286B535413F5D29B000CDC31 /* iAd.framework in Frameworks */,
+				286B51F713F5C538000CDC31 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9CE6E16CD0EE2000FEDE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				288A3CA716EAB35200232A97 /* CoreServices.framework in Frameworks */,
+				288A3C9B16EAB00B00232A97 /* CFNetwork.framework in Frameworks */,
+				288A3C9916EAAFF700232A97 /* AudioToolbox.framework in Frameworks */,
+				288A3C9716EAAFEB00232A97 /* libz.dylib in Frameworks */,
+				288A3C9516EAAFE500232A97 /* SystemConfiguration.framework in Frameworks */,
+				28B9CEAB16CD1772000FEDE8 /* ImageIO.framework in Frameworks */,
+				28B9CEA916CD174C000FEDE8 /* QuartzCore.framework in Frameworks */,
+				28B9CEA516CD170C000FEDE8 /* OpenAL.framework in Frameworks */,
+				28B9CEA316CD1706000FEDE8 /* CoreText.framework in Frameworks */,
+				28B9CEA116CD16F8000FEDE8 /* CoreGraphics.framework in Frameworks */,
+				28B9CE9D16CD16E0000FEDE8 /* QTKit.framework in Frameworks */,
+				28B9CE9B16CD16D5000FEDE8 /* IOKit.framework in Frameworks */,
+				28B9CE9916CD15E0000FEDE8 /* AppKit.framework in Frameworks */,
+				28B9CE9716CD15DB000FEDE8 /* Foundation.framework in Frameworks */,
+				28B9CE9516CD15BB000FEDE8 /* OpenGL.framework in Frameworks */,
+				28B9CE9316CD15B5000FEDE8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2843A8941582B8CF00EC3C73 /* SimpleTwitterClient Android */ = {
+			isa = PBXGroup;
+			children = (
+				2843A8971582B90F00EC3C73 /* java */,
+				2843A8951582B8FF00EC3C73 /* AndroidManifest.xml */,
+			);
+			name = "SimpleTwitterClient Android";
+			path = android;
+			sourceTree = "<group>";
+		};
+		2843A8971582B90F00EC3C73 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				2843A8981582B90F00EC3C73 /* es.no2.examples.twitter */,
+			);
+			name = java;
+			path = ../android/src;
+			sourceTree = "<group>";
+		};
+		2843A8981582B90F00EC3C73 /* es.no2.examples.twitter */ = {
+			isa = PBXGroup;
+			children = (
+				2843A8991582B90F00EC3C73 /* SimpleTwitterClientActivity.java */,
+			);
+			name = es.no2.examples.twitter;
+			path = es/no2/examples/twitter;
+			sourceTree = "<group>";
+		};
+		286B51E313F5C538000CDC31 = {
+			isa = PBXGroup;
+			children = (
+				286B54A713F5D621000CDC31 /* Source */,
+				289E8CAA16111A5400C0516E /* Resources */,
+				286B51F813F5C538000CDC31 /* SimpleTwitterClient iOS */,
+				2843A8941582B8CF00EC3C73 /* SimpleTwitterClient Android */,
+				28B9CE7A16CD0EE3000FEDE8 /* SimpleTwitterClient Mac */,
+				286B51EF13F5C538000CDC31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		286B51EF13F5C538000CDC31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				286B51EE13F5C538000CDC31 /* SimpleTwitterClient iOS.app */,
+				28B9CE7116CD0EE2000FEDE8 /* SimpleTwitterClient Mac.app */,
+			);
+			name = Products;
+			path = ios;
+			sourceTree = "<group>";
+		};
+		286B51F113F5C538000CDC31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3D443851678A1B200540301 /* CoreText.framework */,
+				286B537113F5D46B000CDC31 /* libz.dylib */,
+				2843A8711581A39F00EC3C73 /* CFNetwork.framework */,
+				2843A8721581A39F00EC3C73 /* MobileCoreServices.framework */,
+				286B537313F5D49E000CDC31 /* QuartzCore.framework */,
+				286B536B13F5D38A000CDC31 /* AudioToolbox.framework */,
+				286B536C13F5D38A000CDC31 /* AVFoundation.framework */,
+				286B536D13F5D38A000CDC31 /* MediaPlayer.framework */,
+				286B536913F5D361000CDC31 /* CoreAudio.framework */,
+				286B536813F5D35B000CDC31 /* UIKit.framework */,
+				286B535D13F5D320000CDC31 /* AddressBook.framework */,
+				286B535E13F5D320000CDC31 /* AddressBookUI.framework */,
+				286B535F13F5D320000CDC31 /* Foundation.framework */,
+				286B536013F5D320000CDC31 /* GameKit.framework */,
+				286B536113F5D320000CDC31 /* OpenAL.framework */,
+				286B536213F5D320000CDC31 /* OpenGLES.framework */,
+				286B535B13F5D2E9000CDC31 /* CoreMotion.framework */,
+				286B535913F5D2DB000CDC31 /* EventKit.framework */,
+				286B535713F5D2CC000CDC31 /* MessageUI.framework */,
+				286B535513F5D2BF000CDC31 /* SystemConfiguration.framework */,
+				286B535313F5D29B000CDC31 /* iAd.framework */,
+				286B51F213F5C538000CDC31 /* UIKit.framework */,
+				286B51F413F5C538000CDC31 /* Foundation.framework */,
+				286B51F613F5C538000CDC31 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		286B51F813F5C538000CDC31 /* SimpleTwitterClient iOS */ = {
+			isa = PBXGroup;
+			children = (
+				286B521713F5C642000CDC31 /* SimpleTwitterClient.entitlements */,
+				286B520113F5C538000CDC31 /* SimpleTwitterClientAppDelegate.h */,
+				286B520213F5C538000CDC31 /* SimpleTwitterClientAppDelegate.mm */,
+				286B520413F5C538000CDC31 /* iPhone */,
+				286B520B13F5C538000CDC31 /* iPad */,
+				286B51F913F5C538000CDC31 /* Supporting Files */,
+				286B51F113F5C538000CDC31 /* Frameworks */,
+			);
+			name = "SimpleTwitterClient iOS";
+			path = ios;
+			sourceTree = "<group>";
+		};
+		286B51F913F5C538000CDC31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				286B51FA13F5C538000CDC31 /* SimpleTwitterClient-Info.plist */,
+				286B51FB13F5C538000CDC31 /* InfoPlist.strings */,
+				286B51FE13F5C538000CDC31 /* main.m */,
+				286B520013F5C538000CDC31 /* SimpleTwitterClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		286B520413F5C538000CDC31 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				286B520813F5C538000CDC31 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		286B520B13F5C538000CDC31 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				286B520F13F5C538000CDC31 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		286B54A713F5D621000CDC31 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				286B54A813F5D621000CDC31 /* Bootstrapper.cpp */,
+				286B54A913F5D621000CDC31 /* Bootstrapper.h */,
+				D3C9221316F23A8E00E2CE7E /* TwitterScene.cpp */,
+				D3C9221416F23A8E00E2CE7E /* TwitterScene.h */,
+			);
+			name = Source;
+			path = src;
+			sourceTree = "<group>";
+		};
+		289E8CAA16111A5400C0516E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28B9CE6B16CD0BC2000FEDE8 /* res_mac */,
+				289E8CAF16111A7500C0516E /* res_android */,
+				289E8CAB16111A6A00C0516E /* res_common */,
+				289E8CAC16111A6A00C0516E /* res_ios */,
+			);
+			name = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		28B9CE7316CD0EE3000FEDE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				288A3CA616EAB35200232A97 /* CoreServices.framework */,
+				288A3C9A16EAB00B00232A97 /* CFNetwork.framework */,
+				288A3C9816EAAFF700232A97 /* AudioToolbox.framework */,
+				288A3C9616EAAFEB00232A97 /* libz.dylib */,
+				288A3C9416EAAFE500232A97 /* SystemConfiguration.framework */,
+				28B9CEAA16CD1772000FEDE8 /* ImageIO.framework */,
+				28B9CEA816CD174C000FEDE8 /* QuartzCore.framework */,
+				28B9CEA616CD171E000FEDE8 /* CoreMedia.framework */,
+				28B9CEA416CD170C000FEDE8 /* OpenAL.framework */,
+				28B9CEA216CD1706000FEDE8 /* CoreText.framework */,
+				28B9CEA016CD16F8000FEDE8 /* CoreGraphics.framework */,
+				28B9CE9E16CD16EC000FEDE8 /* CoreAudio.framework */,
+				28B9CE9C16CD16E0000FEDE8 /* QTKit.framework */,
+				28B9CE9A16CD16D5000FEDE8 /* IOKit.framework */,
+				28B9CE9816CD15E0000FEDE8 /* AppKit.framework */,
+				28B9CE9616CD15DB000FEDE8 /* Foundation.framework */,
+				28B9CE9416CD15BB000FEDE8 /* OpenGL.framework */,
+				28B9CE9216CD15B5000FEDE8 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		28B9CE7A16CD0EE3000FEDE8 /* SimpleTwitterClient Mac */ = {
+			isa = PBXGroup;
+			children = (
+				28B9CE7316CD0EE3000FEDE8 /* Frameworks */,
+				28B9CE8616CD0EE3000FEDE8 /* AppDelegate.h */,
+				28B9CE8716CD0EE3000FEDE8 /* AppDelegate.mm */,
+				28B9CE8916CD0EE3000FEDE8 /* MainMenu.xib */,
+				28B9CE7B16CD0EE3000FEDE8 /* Supporting Files */,
+			);
+			name = "SimpleTwitterClient Mac";
+			path = mac;
+			sourceTree = "<group>";
+		};
+		28B9CE7B16CD0EE3000FEDE8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28B9CE7C16CD0EE3000FEDE8 /* SimpleTwitterClient mac-Info.plist */,
+				28B9CE7D16CD0EE3000FEDE8 /* InfoPlist.strings */,
+				28B9CE8016CD0EE3000FEDE8 /* main.m */,
+				28B9CE8216CD0EE3000FEDE8 /* SimpleTwitterClient mac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		2843A89B1582B9A600EC3C73 /* Android */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-t android -a $(ACTION) -c $(CONFIGURATION)";
+			buildConfigurationList = 2843A89C1582B9A600EC3C73 /* Build configuration list for PBXLegacyTarget "Android" */;
+			buildPhases = (
+			);
+			buildToolPath = /Applications/Strawberry.app/Contents/Developer/bin/StrawberryCLI;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Android;
+			passBuildSettingsInEnvironment = 1;
+			productName = "___PROJECTNAME__ Android";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		286B51ED13F5C538000CDC31 /* SimpleTwitterClient iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 286B521413F5C538000CDC31 /* Build configuration list for PBXNativeTarget "SimpleTwitterClient iOS" */;
+			buildPhases = (
+				28173C9F1485BF400017D8C8 /* ShellScript */,
+				286B51EA13F5C538000CDC31 /* Sources */,
+				286B51EB13F5C538000CDC31 /* Frameworks */,
+				286B51EC13F5C538000CDC31 /* Resources */,
+				28E3DC3416E9D8EB00AF1714 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimpleTwitterClient iOS";
+			productName = SimpleTwitterClient;
+			productReference = 286B51EE13F5C538000CDC31 /* SimpleTwitterClient iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28B9CE7016CD0EE2000FEDE8 /* SimpleTwitterClient Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B9CE8C16CD0EE3000FEDE8 /* Build configuration list for PBXNativeTarget "SimpleTwitterClient Mac" */;
+			buildPhases = (
+				286DB2DE16D2EF0A001682E4 /* ShellScript */,
+				28B9CE6D16CD0EE2000FEDE8 /* Sources */,
+				28B9CE6E16CD0EE2000FEDE8 /* Frameworks */,
+				28B9CE6F16CD0EE2000FEDE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimpleTwitterClient Mac";
+			productName = "SimpleTwitterClient mac";
+			productReference = 28B9CE7116CD0EE2000FEDE8 /* SimpleTwitterClient Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		286B51E513F5C538000CDC31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 286B51E813F5C538000CDC31 /* Build configuration list for PBXProject "SimpleTwitterClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 286B51E313F5C538000CDC31;
+			productRefGroup = 286B51EF13F5C538000CDC31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				286B51ED13F5C538000CDC31 /* SimpleTwitterClient iOS */,
+				2843A89B1582B9A600EC3C73 /* Android */,
+				28B9CE7016CD0EE2000FEDE8 /* SimpleTwitterClient Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		286B51EC13F5C538000CDC31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286B51FD13F5C538000CDC31 /* InfoPlist.strings in Resources */,
+				286B520A13F5C538000CDC31 /* MainWindow_iPhone.xib in Resources */,
+				286B521113F5C538000CDC31 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9CE6F16CD0EE2000FEDE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9CE7F16CD0EE3000FEDE8 /* InfoPlist.strings in Resources */,
+				28B9CE8B16CD0EE3000FEDE8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28173C9F1485BF400017D8C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Applications/Strawberry.app/Contents/Developer/bin/StrawberryCLI -t ios\n";
+		};
+		286DB2DE16D2EF0A001682E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Applications/Strawberry.app/Contents/Developer/bin/StrawberryCLI -t mac";
+		};
+		28E3DC3416E9D8EB00AF1714 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -e \"${TARGET_TEMP_DIR}/${PRODUCT_NAME}.xcent\" ]; then\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\nexport CODESIGN_ALLOCATE=\"${PLATFORM_DEVELOPER_BIN_DIR}/codesign_allocate\"\ncodesign -f -s \"${CODE_SIGN_IDENTITY}\" --resource-rules \"${CODESIGNING_FOLDER_PATH}/ResourceRules.plist\" --entitlements \"${TARGET_TEMP_DIR}/${PRODUCT_NAME}.xcent\" \"${CODESIGNING_FOLDER_PATH}\"\nfi\nfi";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		286B51EA13F5C538000CDC31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286B51FF13F5C538000CDC31 /* main.m in Sources */,
+				286B520313F5C538000CDC31 /* SimpleTwitterClientAppDelegate.mm in Sources */,
+				286B54AA13F5D621000CDC31 /* Bootstrapper.cpp in Sources */,
+				D3C9221516F23A8E00E2CE7E /* TwitterScene.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9CE6D16CD0EE2000FEDE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9CE8116CD0EE3000FEDE8 /* main.m in Sources */,
+				28B9CE8816CD0EE3000FEDE8 /* AppDelegate.mm in Sources */,
+				28B9CE8F16CD0F49000FEDE8 /* Bootstrapper.cpp in Sources */,
+				D3C9221616F23A8E00E2CE7E /* TwitterScene.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		286B51FB13F5C538000CDC31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				286B51FC13F5C538000CDC31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		286B520813F5C538000CDC31 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				286B520913F5C538000CDC31 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		286B520F13F5C538000CDC31 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				286B521013F5C538000CDC31 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		28B9CE7D16CD0EE3000FEDE8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B9CE7E16CD0EE3000FEDE8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		28B9CE8916CD0EE3000FEDE8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28B9CE8A16CD0EE3000FEDE8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2843A89D1582B9A600EC3C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2843A89E1582B9A600EC3C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		286B521213F5C538000CDC31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		286B521313F5C538000CDC31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		286B521513F5C538000CDC31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ios/SimpleTwitterClient.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios/SimpleTwitterClient-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					NO2_IOS,
+				);
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"/Applications/Strawberry.app/Contents/Developer/include/**",
+					"/Applications/Strawberry.app/Contents/Developer/third-party/**",
+				);
+				INFOPLIST_FILE = "ios/SimpleTwitterClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Applications/Strawberry.app/Contents/Developer/lib/ios\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstrawberry",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		286B521613F5C538000CDC31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ios/SimpleTwitterClient.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ios/SimpleTwitterClient-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = NO2_IOS;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
+				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"/Applications/Strawberry.app/Contents/Developer/include/**",
+					"/Applications/Strawberry.app/Contents/Developer/third-party/**",
+				);
+				INFOPLIST_FILE = "ios/SimpleTwitterClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Applications/Strawberry.app/Contents/Developer/lib/ios\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lstrawberry",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		28B9CE8D16CD0EE3000FEDE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mac/SimpleTwitterClient mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					NO2_MAC,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Applications/Strawberry.app/Contents/Developer/include/**",
+					"/Applications/Strawberry.app/Contents/Developer/third-party/**",
+				);
+				INFOPLIST_FILE = "mac/SimpleTwitterClient mac-Info.plist";
+				LIBRARY_SEARCH_PATHS = /Applications/Strawberry.app/Contents/Developer/lib/mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lstrawberry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		28B9CE8E16CD0EE3000FEDE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mac/SimpleTwitterClient mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = NO2_MAC;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Applications/Strawberry.app/Contents/Developer/include/**",
+					"/Applications/Strawberry.app/Contents/Developer/third-party/**",
+				);
+				INFOPLIST_FILE = "mac/SimpleTwitterClient mac-Info.plist";
+				LIBRARY_SEARCH_PATHS = /Applications/Strawberry.app/Contents/Developer/lib/mac;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-lstrawberry";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2843A89C1582B9A600EC3C73 /* Build configuration list for PBXLegacyTarget "Android" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2843A89D1582B9A600EC3C73 /* Debug */,
+				2843A89E1582B9A600EC3C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		286B51E813F5C538000CDC31 /* Build configuration list for PBXProject "SimpleTwitterClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286B521213F5C538000CDC31 /* Debug */,
+				286B521313F5C538000CDC31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		286B521413F5C538000CDC31 /* Build configuration list for PBXNativeTarget "SimpleTwitterClient iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286B521513F5C538000CDC31 /* Debug */,
+				286B521613F5C538000CDC31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28B9CE8C16CD0EE3000FEDE8 /* Build configuration list for PBXNativeTarget "SimpleTwitterClient Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B9CE8D16CD0EE3000FEDE8 /* Debug */,
+				28B9CE8E16CD0EE3000FEDE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 286B51E513F5C538000CDC31 /* Project object */;
+}

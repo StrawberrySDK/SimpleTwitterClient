@@ -1,0 +1,122 @@
+// Cell template styles
+#cell_grid {
+	pivot: 0 0;
+    left: 0;
+    top: 0;
+    height: 72px;
+    width: 100%;
+    background-image: item.png;
+    background-style: ninepatch(1,1);
+}
+#cell_grid:highlighted {
+    background-image: item_over.png;
+}
+#photo {
+    pivot: 0 0;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-style: ninepatch(2,2);
+}
+#user_photo {
+    pivot: 0 0;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+}
+#nick {
+    pivot: 0 baseline;
+    top: 22px;
+    left: 70px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+}
+#tweet {
+    pivot: 0 0.5;
+    top: 40px;
+    left: 70px;
+    right: 10px;
+    color: #333333;
+    font-size: 14px;
+    max-lines: 2;
+}
+
+
+
+// Main screen styles
+#main_scene {
+	background-image: background.png;
+}
+
+#top_bar {
+	pivot: 0 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 75px;
+    background-style: ninepatch(1,1);
+    background-image: header.png;
+}
+
+#title {
+    color: #ffffff;
+    shadow-offset: 1 1;
+    shadow-color: #3b2934;
+    pivot: 0.5 0;
+    left: center;
+    top: 7px;
+    font-size: 19px;
+}
+
+#search_text {
+	pivot: 0 0;
+	left: 7px;
+	right: 69px;
+	top: 37px;
+	height: 25px;
+	background-color: #ffffff;
+	color: #000000;
+	action-key: search;
+}
+
+#search_button {
+	pivot: 1 0;
+	right: 7px;
+	top: 34.5px;
+	width: 55px;
+	height: 30px;
+	background-style: color(#898989);
+}
+#search_button:highlighted {
+	top: 36px;
+	background-style: color(#343434);
+}
+
+#search_label {
+	pivot: 0.5 0.5;
+	left: center;
+	top: center;
+	font-weight: bold;
+	color: #000000;
+}
+#search_label:highlighted {
+	color: #ffffff;
+}
+
+#tweets_grid {
+	pivot: 0 0;
+	left: 0;
+	top: 75px;
+	padding-bottom: 70px;
+    show-scrollbars: vertical;
+}
+
+#skyline{
+    pivot: 0.5 1;
+    bottom: 0;
+    left: center;
+    ignore-touches: true;
+}

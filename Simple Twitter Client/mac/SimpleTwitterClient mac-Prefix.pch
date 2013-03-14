@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SimpleTwitterClient mac' target in the 'SimpleTwitterClient mac' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
