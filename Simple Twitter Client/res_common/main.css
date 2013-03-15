@@ -110,6 +110,7 @@
 	pivot: 0 0;
 	left: 0;
 	top: 75px;
+    bottom: 0;
 	padding-bottom: 70px;
     show-scrollbars: vertical;
 }

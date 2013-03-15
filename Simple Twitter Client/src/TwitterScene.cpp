@@ -17,10 +17,13 @@ TwitterScene::TwitterScene():NO2Scene() {
     
 	NO2GridView *gridView = (NO2GridView *) getElementById("tweets_grid");
 	gridView->setDataSource(this);
+    
     m_data = NULL;
+    m_imageCache = new NO2MutableDictionary();
 }
 
 TwitterScene::~TwitterScene() {
+    RELEASE(m_imageCache);
 	RELEASE(m_data);
 }
 
@@ -74,6 +77,7 @@ void TwitterScene::onRequestCompleted(NO2HTTPRequest *request,  NO2HTTPResponse 
         
 	} else {
 		// There was an error, do something.
+        LOG("HTTP Error: %d", response->getStatusCode());
 	}
     
     ((NO2GridView *) getElementById("tweets_grid"))->reloadData();
@@ -120,11 +124,22 @@ void TwitterScene::fillDataForIndex(NO2Drawable *container, NO2Drawable *tpl, NO
     
     ((NO2Label *) tpl->getChildWithId("tweet"))->setText((NO2String *) data->getObjectByExpression("text"));
     
+    
+    NO2String *url = NULL;
     if (data->getObjectByExpression("user.profile_image_url")) {
-        ((NO2ImageView *) tpl->getChildWithId("user_photo"))->setImage(loadImage((NO2String *) data->getObjectByExpression("user.profile_image_url")));
+        url = data->getStringByExpression("user.profile_image_url");
     } else {
-        ((NO2ImageView *) tpl->getChildWithId("user_photo"))->setImage(loadImage((NO2String *) data->getObjectByExpression("profile_image_url")));
+        url = data->getStringByExpression("profile_image_url");
     }
+    
+    NO2Image *img = (NO2Image *)m_imageCache->objectForKey(url);
+    if(img == NULL) {
+        // If it is a new image we can add it to the image cache.
+        img = loadImage(url);
+        m_imageCache->addObjectForKey(img, url);
+    }
+
+    ((NO2ImageView *) tpl->getChildWithId("user_photo"))->setImage(img);
 }
 
 void TwitterScene::didSelectedIndex(NO2Drawable *container, const NO2IndexPath &indexPath) {
@@ -142,6 +157,7 @@ void TwitterScene::textFieldDidEndEditing(NO2TextField *textField) {
 void TwitterScene::textFieldDidChanged(NO2TextField *textField) {
 }
 void TwitterScene::textFieldDidReturn(NO2TextField *textField) {
+    LOG("Did return");
     doSearch(textField->getText());
 }
 // *****************************************************
@@ -163,4 +179,8 @@ void TwitterScene::doSearch(strawberry::NO2String *searchTerm) {
     LOG("%s", str->c_str());
     req = NO2HTTPRequest::requestWithURL(str);
     g_sharedDirector->addConnectionWithRequest(req, this);
+    
+    
+    // Clear image cache
+    m_imageCache->removeAllObjects();
 }

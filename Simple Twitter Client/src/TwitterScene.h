@@ -14,6 +14,8 @@
 
 class TwitterScene : public NO2Scene, public NO2HTTPResponseDelegate, public NO2DataSource, public NO2TextFieldDelegate {
 
+    NO2MutableDictionary *m_imageCache;
+    
 public:
     TwitterScene();
     
