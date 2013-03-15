@@ -1,0 +1,16 @@
+# Android project - files to be ignored - https://github.com/github/gitignore/blob/master/Android.gitignore
+bin
+gen
+obj
+local.properties
+*.apk
+*.ap_
+*.dex
+*.class
+.classpath
+.project
+proguard/
+
+xcuserdata
+\.svn
+\.DS_Store
