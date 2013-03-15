@@ -1,0 +1,29 @@
+<group id="top_bar">
+	<label id="title" text="Simple Twitter Example" />
+	<textfield id="search_text" placeholder="Type something here..." />
+	
+	<button id="search_button" command="1">
+		<label id="search_label" text="Search!" />
+	</button>		
+</group>
+
+<gridview id="tweets_grid">
+	<cell template="cell_grid_tpl.html" />
+	<cell template="cell_grid_tpl.html" />
+	<cell template="cell_grid_tpl.html" />
+	<cell template="cell_grid_tpl.html" />
+	<cell template="cell_grid_tpl.html" />
+</gridview>
+
+<img id="skyline" src="skyline.png" />
+
+<action name="show_skyline">
+	<animate id="skyline" animation="show_skyline" />
+</action>
+
+<action name="hide_gridview">
+	<animate id="tweets_grid" animation="hide_gridview" />
+</action>
+<action name="show_gridview">
+	<animate id="tweets_grid" animation="show_gridview" />
+</action>

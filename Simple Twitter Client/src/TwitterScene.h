@@ -21,10 +21,10 @@ public:
     
     // ******** Begin of Scene methods ********
 	virtual void onSceneWillAppear();
-//	virtual void onSceneDidAppear();
-//	virtual void onSceneWillDisappear();
+    virtual void onSceneDidAppear();
 	virtual void onSceneDidDisappear();
     virtual void onCommand(int command, int subcommand, NO2Object *object);
+    virtual void onDidEndResize(float width, float height);
     // ****************************************
 
     // ******** Begin of HttpResponseDelegate methods ********
@@ -38,10 +38,6 @@ public:
     virtual NO2String *templateForIndex(NO2Drawable *container, const NO2IndexPath &indexPath);
     virtual void fillDataForIndex(NO2Drawable *container, NO2Drawable *tpl, NO2String *tplName, const NO2IndexPath &indexPath);
     virtual void didSelectedIndex(NO2Drawable *container, const NO2IndexPath &indexPath);
-    //virtual NO2String *templateForHeader(NO2Drawable *container, int section);
-    //virtual void fillDataForHeader(NO2Drawable *container, NO2Drawable *tpl, NO2String *tplName, int section);
-    //virtual NO2String *templateForFooter(NO2Drawable *container, int section);
-    //virtual void fillDataForFooter(NO2Drawable *container, NO2Drawable *tpl, NO2String *tplName, int section);
     // *********************************************
 
     // ******** Begin of TextField Delegate methods ********

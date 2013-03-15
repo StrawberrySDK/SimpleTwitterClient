@@ -11,7 +11,13 @@
 #include "TwitterScene.h"
 
 TwitterScene::TwitterScene():NO2Scene() {
-	loadHTML("main.html");
+    if (g_sharedDirector->isPhoneDevice()) {
+        loadHTML("phone.html");
+    } else {
+        loadHTML("tablet_desktop.html");
+    }
+    
+    getElementById("skyline")->addPositionY(100);
     
     ((NO2TextField *) getElementById("search_text"))->setDelegate(this);
     
@@ -31,6 +37,11 @@ TwitterScene::~TwitterScene() {
 void TwitterScene::onSceneWillAppear() {
 	NO2Scene::onSceneWillAppear();
     doSearch(_NO2STRING("@StrawberrySDK"));
+}
+
+void TwitterScene::onSceneDidAppear() {
+    NO2Scene::onSceneDidAppear();
+    runAction(_NO2STRING("show_skyline"));
 }
 
 void TwitterScene::onSceneDidDisappear() {
@@ -53,6 +64,20 @@ void TwitterScene::onCommand(int command, int subcommand, NO2Object *object) {
 			break;
 		}
 	}
+}
+
+void TwitterScene::onDidEndResize(float width, float height) {
+    NO2Scene::onDidEndResize(width, height);
+    NO2String *search = ((NO2TextField *) getElementById("search_text"))->getText();
+    if (search) {
+        search = RETAIN(search);
+    }
+    reloadHTML();
+    
+    ((NO2TextField *) getElementById("search_text"))->setText(search);
+    RELEASE(search);
+    ((NO2TextField *) getElementById("search_text"))->setDelegate(this);
+    ((NO2GridView *) getElementById("tweets_grid"))->setDataSource(this);
 }
 // ****************************************
 
@@ -81,6 +106,9 @@ void TwitterScene::onRequestCompleted(NO2HTTPRequest *request,  NO2HTTPResponse 
 	}
     
     ((NO2GridView *) getElementById("tweets_grid"))->reloadData();
+    
+    
+    runAction(_NO2STRING("show_gridview"));
 }
 
 void TwitterScene::onRequestFailed(NO2HTTPRequest *request, int errorCode) {
@@ -117,12 +145,12 @@ void TwitterScene::fillDataForIndex(NO2Drawable *container, NO2Drawable *tpl, NO
     NO2Dictionary *data = (NO2Dictionary *) m_data->objectAtIndex(indexPath.index);
     
     if (data->getObjectByExpression("user.screen_name")) {
-        ((NO2Label *) tpl->getChildWithId("nick"))->setText((NO2String *) data->getObjectByExpression("user.screen_name"));
+        ((NO2Label *) tpl->getChildWithId("nick"))->setText(data->getStringByExpression("user.screen_name"));
     } else {
-        ((NO2Label *) tpl->getChildWithId("nick"))->setText((NO2String *) data->getObjectByExpression("from_user_name"));
+        ((NO2Label *) tpl->getChildWithId("nick"))->setText(data->getStringByExpression("from_user_name"));
     }
     
-    ((NO2Label *) tpl->getChildWithId("tweet"))->setText((NO2String *) data->getObjectByExpression("text"));
+    ((NO2Label *) tpl->getChildWithId("tweet"))->setText(data->getStringByExpression("text"));
     
     
     NO2String *url = NULL;
@@ -143,8 +171,6 @@ void TwitterScene::fillDataForIndex(NO2Drawable *container, NO2Drawable *tpl, NO
 }
 
 void TwitterScene::didSelectedIndex(NO2Drawable *container, const NO2IndexPath &indexPath) {
-//	NO2Object *selected = m_data->objectAtIndex(indexPath.index);
-	// Do something with selected object.
 }
 // *********************************************
 
@@ -157,7 +183,6 @@ void TwitterScene::textFieldDidEndEditing(NO2TextField *textField) {
 void TwitterScene::textFieldDidChanged(NO2TextField *textField) {
 }
 void TwitterScene::textFieldDidReturn(NO2TextField *textField) {
-    LOG("Did return");
     doSearch(textField->getText());
 }
 // *****************************************************
@@ -166,6 +191,7 @@ void TwitterScene::textFieldDidReturn(NO2TextField *textField) {
 
 void TwitterScene::doSearch(strawberry::NO2String *searchTerm) {
     if (!searchTerm || !searchTerm->c_str()) return;
+    runAction(_NO2STRING("hide_gridview"));
     
     NO2HTTPRequest *req = NULL;
     NO2String *str = NULL;

@@ -1,0 +1,46 @@
+// Cell template styles
+#cell_grid {
+	pivot: 0 0;
+    left: 0px;
+    top: 0px;
+    height: 45px;
+    width: 100%;
+    background-image: item.png;
+    background-style: ninepatch(1,1);
+}
+#cell_grid:highlighted {
+    background-image: item_over.png;
+}
+#photo {
+    pivot: 0 0;
+    top: 5px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    background-style: ninepatch(2,2);
+}
+#user_photo {
+    pivot: 0 0;
+    top: 5px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+}
+#nick {
+    pivot: 0 baseline;
+    top: 14px;
+    left: 45px;
+    right: 5px;
+    color: #333333;
+    font-size: 10px;
+    font-weight: bold;
+}
+#tweet {
+    pivot: 0 0.5;
+    top: 29px;
+    left: 45px;
+    right: 5px;
+    color: #333333;
+    font-size: 10px;
+    max-lines: 2;
+}

@@ -1,0 +1,24 @@
+// Main screen styles
+#main_scene {
+	background-image: background.png;
+    background-style: scale-to-fill;
+}
+
+#skyline {
+    pivot: 0.5 1;
+    bottom: 0px;
+    left: center;
+    ignore-touches: true;
+}
+
+@show_skyline {
+    bottom: 0px;
+    duration: 0.7s;
+    curve: ease-out;
+}
+
+@hide_gridview {
+    top: 100%;
+    duration: 0.8s;
+    curve: ease-in-out;
+}

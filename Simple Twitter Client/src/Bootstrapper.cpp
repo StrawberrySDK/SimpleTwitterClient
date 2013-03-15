@@ -23,7 +23,11 @@ bool NO2GLBootstrapper(NO2Director *director) {
 	LOG("Bootstrapping...");
 
 //    Change app orientation
-//    director->setOrientation(ORIENTATION_0);
+    if (director->isPhoneDevice()) {
+        director->setOrientation(ORIENTATION_0);
+    } else {
+        director->setOrientation(ORIENTATION_90);
+    }
     
 	return true;
 }
