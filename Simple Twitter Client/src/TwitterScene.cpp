@@ -112,6 +112,7 @@ void TwitterScene::onRequestCompleted(NO2HTTPRequest *request,  NO2HTTPResponse 
 }
 
 void TwitterScene::onRequestFailed(NO2HTTPRequest *request, int errorCode) {
+    LOG("Request failed: %d", errorCode);
 	switch (errorCode) {
 		default: {
 			break;
@@ -190,6 +191,8 @@ void TwitterScene::textFieldDidReturn(NO2TextField *textField) {
 
 
 void TwitterScene::doSearch(strawberry::NO2String *searchTerm) {
+    g_sharedDirector->cancelAllConnections();
+    
     if (!searchTerm || !searchTerm->c_str()) return;
     runAction(_NO2STRING("hide_gridview"));
     
